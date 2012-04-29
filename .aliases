@@ -5,14 +5,18 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
-alias d="cd ~/Documents/Dropbox"
-alias p="cd ~/Projects"
+alias cdd="cd ~/Documents/Cloud/Dropbox"
+alias cdn="cd ~/Documents/Cloud/Dropbox/perso/nv"
+alias cdv="cd ~/Documents/Cloud/Dropbox/perso/viki"
+alias h="history"
 alias g="git"
 alias v="vim"
 alias m="mate ."
 alias s="subl ."
 alias o="open"
 alias oo="open ."
+
+alias cic='set completion-ignore-case On'
 
 # List all files colorized in long format
 alias l="ls -Gl"
@@ -22,6 +26,12 @@ alias la="ls -Gla"
 
 # List only directories
 alias lsd='ls -l | grep "^d"'
+
+# Paranoid about overwriting files
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
+alias del='/bin/rm -f'
 
 # Always use color output for `ls`
 if [[ "$OSTYPE" =~ ^darwin ]]; then
@@ -35,7 +45,7 @@ fi
 alias sudo='sudo '
 
 # Get OS X Software Updates, update Homebrew itself, and upgrade installed Homebrew packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade'
+#alias update='sudo softwareupdate -i -a; brew update; brew upgrade'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -62,7 +72,7 @@ type -t md5sum > /dev/null || alias md5sum="md5"
 alias c="tr -d '\n' | pbcopy"
 
 # Recursively delete `.DS_Store` files
-alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+alias cleandsstore="find . -type f -name '*.DS_Store' -ls -delete"
 
 # File size
 alias fs="stat -f \"%z bytes\""
@@ -94,11 +104,11 @@ alias spoton="sudo mdutil -a -i on"
 alias plistbuddy="/usr/libexec/PlistBuddy"
 
 # One of @janmoesen’s ProTip™s
-for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
-	alias "$method"="lwp-request -m '$method'"
-done
+#for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
+#	alias "$method"="lwp-request -m '$method'"
+#done
 
 # Stuff I never really use but cannot delete either because of http://xkcd.com/530/
-alias stfu="osascript -e 'set volume output muted true'"
-alias pumpitup="osascript -e 'set volume 10'"
-alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
+#alias stfu="osascript -e 'set volume output muted true'"
+#alias pumpitup="osascript -e 'set volume 10'"
+#alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
