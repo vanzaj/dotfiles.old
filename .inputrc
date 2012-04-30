@@ -1,3 +1,8 @@
+# Enable vi mode
+set editing-mode vi
+
+Space: magic-space
+
 # Make Tab autocomplete regardless of filename case
 set completion-ignore-case on
 
