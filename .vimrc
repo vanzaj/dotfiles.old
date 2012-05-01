@@ -100,7 +100,6 @@ map <c-h> <c-w>h
 map <Leader>n <esc>:tabprevious<CR>
 map <Leader>m <esc>:tabnext<CR>
 
-
 " Automatic commands
 if has("autocmd")
 	" Enable file type detection
@@ -111,6 +110,11 @@ endif
 
 " Setup Pathogen
 call pathogen#infect()
+
+" colors
+syntax enable
+set background=dark
+colorscheme solarized
 
 " ctrlp
 let g:ctrlp_max_height = 30
