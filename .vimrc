@@ -100,6 +100,10 @@ map <c-h> <c-w>h
 map <Leader>n <esc>:tabprevious<CR>
 map <Leader>m <esc>:tabnext<CR>
 
+" colors
+syntax enable
+set background=dark
+colorscheme solarized
 
 " Automatic commands
 if has("autocmd")
