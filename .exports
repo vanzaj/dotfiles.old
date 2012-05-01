@@ -10,7 +10,7 @@ export HISTSIZE=32768
 export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
 # Make some commands not show up in history
-export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
+export HISTIGNORE="ls:ls *:la:l:h:cd:cd -:pwd;exit:date:* --help"
 
 # virtualenv
 export WORKON_HOME=$HOME/dev/pve
