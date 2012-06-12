@@ -16,3 +16,9 @@
 [submodule ".vim/bundle/vim-flake8"]
 	path = .vim/bundle/vim-flake8
 	url = git://github.com/nvie/vim-flake8.git
+[submodule ".vim/bundle/vim-stulus"]
+	path = .vim/bundle/vim-stulus
+	url = git://github.com/wavded/vim-stylus.git
+[submodule ".vim/bundle/vim-stylus"]
+	path = .vim/bundle/vim-stylus
+	url = git://github.com/wavded/vim-stylus.git
