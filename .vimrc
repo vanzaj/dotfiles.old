@@ -130,3 +130,5 @@ let g:pymode_syntax_builtin_objs = 0
 let g:pymode_syntax_builtin_funcs = 0
 map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
 
+set pastetoggle=<F2>
+set completeopt=longest,menuone
