@@ -33,7 +33,7 @@ filetype off
 filetype plugin indent on
 syntax on
 " Highlight current line
-"set cursorline
+set cursorline
 " Make tabs as wide as two spaces
 set tabstop=2
 set softtabstop=2 
@@ -114,14 +114,17 @@ call pathogen#infect()
 " colors
 syntax enable
 set background=dark
+let g:solarized_termtrans = 1
 colorscheme solarized
+" force normal text color to white
+hi Normal ctermfg=White
 
 " ctrlp
 let g:ctrlp_max_height = 30
 
 " minibuffer
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
+"let g:miniBufExplMapWindowNavVim = 1
+"let g:miniBufExplMapCTabSwitchBufs = 1
 
 " Settings for python-mode
 map <Leader>g :call RopeGotoDefinition()<CR>
