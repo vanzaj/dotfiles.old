@@ -141,3 +141,5 @@ map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
 
 set pastetoggle=<F2>
 set completeopt=longest,menuone
+
+autocmd vimenter * if !argc() | NERDTree | endif
