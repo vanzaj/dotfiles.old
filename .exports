@@ -13,6 +13,9 @@ export HISTCONTROL=ignoredups
 # Make some commands not show up in history
 export HISTIGNORE="ls:ls *:la:l:h:cd:cd -:pwd;exit:date:* --help"
 
+# GNUPG
+export GPG_TTY=`tty`
+export GNUPGHOME=$HOME/.keys/.gnupg
 # virtualenv
 export WORKON_HOME=$HOME/dev/pve
 #export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
