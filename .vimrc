@@ -142,4 +142,7 @@ map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
 set pastetoggle=<F2>
 set completeopt=longest,menuone
 
+" Settings for NERDTree
+nmap <Leader>n :NERDTreeToggle<cr>
+let NERDTreeIgnore=['\.pyc$', '\.egg-info$', '^build$']
 autocmd vimenter * if !argc() | NERDTree | endif
