@@ -5,15 +5,14 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
+alias cdc="cd ~/Documents/Cloud"
 alias cdb="cd ~/Documents/Cloud/Dropbox"
-alias cdn="cd ~/Documents/Cloud/Dropbox/perso/nv"
-alias cdv="cd ~/Documents/Cloud/Dropbox/perso/viki"
 alias h="history"
 alias g="git"
 alias v="vim"
 alias vi="vim"
-alias m="mate ."
-alias s="subl ."
+#alias m="mate ."
+#alias s="subl ."
 alias o="open"
 alias oo="open ."
 
