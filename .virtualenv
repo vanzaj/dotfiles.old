@@ -47,3 +47,5 @@ if [[ $(type -t workon) != function ]]; then
   done
 fi
 
+# activate autoenv
+source /usr/local/opt/autoenv/activate.sh
