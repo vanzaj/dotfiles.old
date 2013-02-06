@@ -25,7 +25,7 @@ endif
 " Enable line numbers
 set number
 " Text width
-set tw=79
+set tw=80
 set nowrap
 set fo-=t " don't wrap text while typing
 " Enable syntax highlighting
@@ -113,11 +113,12 @@ call pathogen#infect()
 
 " colors
 syntax enable
-set background=dark
-let g:solarized_termtrans = 1
-colorscheme solarized
+set background=light
+"let g:solarized_termtrans = 1
+colorscheme hemisu
+set colorcolumn=80
 " force normal text color to white
-hi Normal ctermfg=White
+"hi Normal ctermfg=White
 
 " ctrlp
 let g:ctrlp_max_height = 30
