@@ -23,28 +23,29 @@ let s:black=           { "gui": "#000000", "cterm": "16"  }
 let s:white=           { "gui": "#FFFFFF", "cterm": "231" }
 let s:almostWhite=     { "gui": "#EEEEEE", "cterm": "255" }
 let s:almostBlack=     { "gui": "#111111", "cterm": "233" }
-let s:middleDarkGrey=  { "gui": "#777777", "cterm": "241" }
-let s:middleLightGrey= { "gui": "#999999", "cterm": "246" }
-let s:lightGrey=       { "gui": "#BBBBBB", "cterm": "249" }
+let s:middleDarkGrey=  { "gui": "#606060", "cterm": "241" }
+let s:middleLightGrey= { "gui": "#949494", "cterm": "246" }
+let s:lightGrey=       { "gui": "#B2B2B2", "cterm": "249" }
 let s:darkGrey=        { "gui": "#444444", "cterm": "238" }
 
-let s:darkPink=        { "gui": "#63001C", "cterm": "88"  }
-let s:middleDarkPink=  { "gui": "#FF0055", "cterm": "197" }
-let s:middleLightPink= { "gui": "#D65E76", "cterm": "167" }
+let s:darkPink=        { "gui": "870000", "cterm": "88"  }
+let s:middleDarkPink=  { "gui": "#FF005F", "cterm": "197" }
+let s:middleLightPink= { "gui": "#DF5F5F", "cterm": "167" }
 let s:lightPink=       { "gui": "#FFAFAF", "cterm": "217" }
 
-let s:darkBlue=        { "gui": "#005F87", "cterm": "24"  }
-let s:middleDarkBlue=  { "gui": "#538192", "cterm": "24"  }
-let s:middleLightBlue= { "gui": "#9FD3E6", "cterm": "116" }
-let s:lightBlue=       { "gui": "#CBE4EE", "cterm": "195" }
+let s:darkBlue=        { "gui": "#000087", "cterm": "18"  }
+let s:middleDarkBlue=  { "gui": "#005F87", "cterm": "24"  }
+let s:middleLightBlue= { "gui": "#87DFDF", "cterm": "116" }
+let s:lightBlue=       { "gui": "#DFFFFF", "cterm": "195" }
 
-let s:darkGreen=       { "gui": "#5F5F00", "cterm": "58"  }
-let s:middleDarkGreen= { "gui": "#739200", "cterm": "64"  }
-let s:middleLightGreen={ "gui": "#B1D631", "cterm": "149" }
-let s:lightGreen=      { "gui": "#BBFFAA", "cterm": "157" }
+let s:darkGreen=       { "gui": "#005F00", "cterm": "22"  }
+let s:middleDarkGreen= { "gui": "#008700", "cterm": "28"  }
+let s:middleLightGreen={ "gui": "#87DF5F", "cterm": "113" }
+let s:lightGreen=      { "gui": "#AFFFAF", "cterm": "157" }
 
-let s:darkTan=         { "gui": "#503D15", "cterm": "52"  }
-let s:lightTan=        { "gui": "#ECE1C8", "cterm": "230" }
+let s:darkTan=         { "gui": "#DFAF87", "cterm": "180"  }
+let s:lightTan=        { "gui": "#FFDFAF", "cterm": "223" }
+let s:lightYellow=     { "gui": "#FFFFDF", "cterm": "230" }
 
 " Assign to semantic categories based on background color
 if &background=="dark"
@@ -67,12 +68,12 @@ if &background=="dark"
 	let s:faintBlue=s:darkBlue
 else
 	" Light theme
-	let s:bg=s:white
+	let s:bg=s:lightYellow
 	let s:norm=s:almostBlack
 	let s:comment=s:middleLightGrey
 	let s:dimmed=s:middleDarkGrey
 	let s:subtle=s:lightGrey
-	let s:faint=s:almostWhite
+	let s:faint=s:lightTan
 	let s:accent1=s:middleDarkBlue
 	let s:accent2=s:middleDarkGreen
 	let s:accent3=s:middleDarkPink
@@ -107,7 +108,7 @@ if version >= 700
 	call s:h("PmenuThumb",  { "bg": s:norm })
 	call s:h("PmenuSBar",   { "bg": s:subtle })
 	call s:h("PmenuSel",    { "bg": s:faintBlue })
-	call s:h("ColorColumn", { "bg": s:faintRed })
+	call s:h("ColorColumn", { "bg": s:faint })
 	call s:h("SpellBad",    { "sp": s:normRed, "gui": "undercurl" })
 	call s:h("SpellCap",    { "sp": s:accent1, "gui": "undercurl" })
 	call s:h("SpellRare",   { "sp": s:normGreen, "gui": "undercurl" })
@@ -153,7 +154,7 @@ hi! link MoreMsg	Title
 hi! link Question	MoreMsg
 hi! link ModeMsg	MoreMsg
 hi! link TabLineFill	StatusLineNC
-hi! link LineNr		NonText
+hi! link LineNr		StatusLineNC
 hi! link SpecialKey	NonText
 
 "}}}
