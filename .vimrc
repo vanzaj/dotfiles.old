@@ -86,9 +86,9 @@ function! StripWhitespace()
 	call setpos('.', save_cursor)
 	call setreg('/', old_query)
 endfunction
-noremap <leader>ss :call StripWhitespace()<CR>
+noremap <leader>ss :call StripWhitespace()<cr>
 " Save a file as root (,W)
-noremap <leader>W :w !sudo tee % > /dev/null<CR>
+noremap <leader>W :w !sudo tee % > /dev/null<cr>
 
 " Moving between windows and tabs
 map <c-j> <c-w>j 
@@ -96,9 +96,27 @@ map <c-k> <c-w>k
 map <c-l> <c-w>l 
 map <c-h> <c-w>h
 
+" natural move around wrapped text
+nnoremap j gj
+nnoremap k gk
+
+" switching buffers 
+nmap <c-e> :e#<cr>
+nnoremap :b :ls<cr>:b<space>
+
+" toggle numbers and paste
+nmap <Leader>l :setlocal number!<cr>
+nmap <Leader>o :set paste!<cr>
+
+" tab size
+nmap <Leader>t :set expandtab tabstop=4 shiftwidth=4 softtabstop=4<cr>
+nmap <Leader>T :set expandtab tabstop=8 shiftwidth=8 softtabstop=4<cr>
+nmap <Leader>M :set noexpandtab tabstop=8 shiftwidth=8 softtabstop=4<cr>
+nmap <Leader>m :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<cr>
+
 " easier moving between tabs
-map <Leader>n <esc>:tabprevious<CR>
-map <Leader>m <esc>:tabnext<CR>
+map <Leader>n <esc>:tabprevious<cr>
+map <Leader>m <esc>:tabnext<cr>
 
 " Automatic commands
 if has("autocmd")
@@ -107,9 +125,6 @@ if has("autocmd")
 	" Treat .json files as .js
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 endif
-
-" Setup Pathogen
-call pathogen#infect()
 
 " colors
 syntax enable
@@ -120,24 +135,29 @@ set colorcolumn=80
 " force normal text color to white
 "hi Normal ctermfg=White
 
+" Setup Pathogen
+call pathogen#infect()
+let g:pathogen_disabled =['python-mode']
+
 " ctrlp
 let g:ctrlp_max_height = 30
+let g:ctrlp_map = '<C-b>'
 
 " minibuffer
 "let g:miniBufExplMapWindowNavVim = 1
 "let g:miniBufExplMapCTabSwitchBufs = 1
 
 " Settings for python-mode
-map <Leader>g :call RopeGotoDefinition()<CR>
-let ropevim_enable_shortcuts = 1
-let g:pymode_rope_goto_def_newwin = 1
-let g:pymode_rope_extended_complete = 1
-let g:pymode_breakpoint = 0
-let g:pymode_syntax = 1
-let g:pymode_syntax_builtin_objs = 0
-let g:pymode_syntax_builtin_funcs = 0
+"map <Leader>g :call RopeGotoDefinition()<CR>
+"let ropevim_enable_shortcuts = 1
+"let g:pymode_rope_goto_def_newwin = 1
+"let g:pymode_rope_extended_complete = 1
+"let g:pymode_breakpoint = 0
+"let g:pymode_syntax = 1
+"let g:pymode_syntax_builtin_objs = 0
+"let g:pymode_syntax_builtin_funcs = 0
 " Disable pylint checking every save
-let g:pymode_lint_write = 0
+"let g:pymode_lint_write = 0
 map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
 
 set pastetoggle=<F2>
