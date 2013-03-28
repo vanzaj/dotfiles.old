@@ -130,7 +130,7 @@ endif
 syntax enable
 set background=light
 "let g:solarized_termtrans = 1
-colorscheme hemisu
+colorscheme hemisu_white
 set colorcolumn=80
 " force normal text color to white
 "hi Normal ctermfg=White
