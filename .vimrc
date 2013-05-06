@@ -167,3 +167,11 @@ set completeopt=longest,menuone
 nmap <Leader>n :NERDTreeToggle<cr>
 let NERDTreeIgnore=['\.pyc$', '\.egg-info$', '^build$']
 autocmd vimenter * if !argc() | NERDTree | endif
+
+" Abbreviations
+" current date-time stamp
+iab <expr> idtc strftime("%b %d, %Y %H:%M:%S")
+" date stamp
+iab <expr> ids strftime("%Y/%m/%d")
+" date-time stamp ISO8601 format
+iab <expr> isod strftime("%FT%T%z")
