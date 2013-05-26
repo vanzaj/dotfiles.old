@@ -75,3 +75,16 @@ function codepoint() {
 browser(){
   open -a "/Applications/Chromium.app/" "$1"
 }
+
+# activate anaconda 
+function anaconda() {
+  anaconda_bin="$HOME/dev/anaconda/bin"
+  leader=`echo $PATH | cut -d':' -f1`
+  if [ "$leader" != "$anaconda_bin" ]; then
+    PATH=${anaconda_bin}:$PATH
+    PS1="(anaconda)"$PS1
+    export PATH PS1
+  else
+    echo "Anaconda already activated"      
+  fi
+}
