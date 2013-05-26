@@ -1,4 +1,4 @@
-export PATH=$HOME/dev/anaconda/bin:$PATH
+#export PATH=$HOME/dev/anaconda/bin:$PATH
 # Make vim the default editor
 export EDITOR="vim"
 # Don’t clear the screen after quitting a manual page
