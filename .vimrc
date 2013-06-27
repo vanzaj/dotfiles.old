@@ -158,6 +158,7 @@ let g:ctrlp_map = '<C-b>'
 "let g:pymode_syntax_builtin_funcs = 0
 " Disable pylint checking every save
 let g:pymode_lint_write = 0
+let g:pymode_lint_ignore = "E126"
 noremap <leader>pl :PyLint<cr>
 map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
 
