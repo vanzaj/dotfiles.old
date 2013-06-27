@@ -137,7 +137,7 @@ set colorcolumn=80
 
 " Setup Pathogen
 call pathogen#infect()
-let g:pathogen_disabled =['python-mode']
+let g:pathogen_disabled =['python-mode', 'vim-flake8']
 
 " ctrlp
 let g:ctrlp_max_height = 30
@@ -157,10 +157,12 @@ let g:ctrlp_map = '<C-b>'
 "let g:pymode_syntax_builtin_objs = 0
 "let g:pymode_syntax_builtin_funcs = 0
 " Disable pylint checking every save
-let g:pymode_lint_write = 0
-let g:pymode_lint_ignore = "E126"
-noremap <leader>pl :PyLint<cr>
+"let g:pymode_lint_write = 0
+"let g:pymode_lint_ignore = "E126"
+"noremap <leader>pl :PyLint<cr>
 map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
+let g:syntastic_python_checkers=['flake8']
+let g:syntastic_quiet_warnings=1
 
 set pastetoggle=<F2>
 set completeopt=longest,menuone
