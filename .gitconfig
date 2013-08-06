@@ -12,6 +12,8 @@
 	p = !"git pull; git submodule foreach git pull origin master"
 	# Clone a repository including all submodules
 	c = clone --recursive
+    # 
+    g = grep --break --heading --line-number
 	# Commit all changes
 	ca = !git add . && git add -u && git commit -a
 	# Switch to a branch, creating it if necessary
@@ -79,3 +81,6 @@
 	pushInsteadOf = "git://gist.github.com/"
 [url "git://gist.github.com/"]
 	insteadOf = "gist:"
+[grep]
+	lineNumber = true
+
