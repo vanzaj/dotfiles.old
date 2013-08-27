@@ -35,9 +35,9 @@ syntax on
 " Highlight current line
 set cursorline
 " Make tabs as wide as two spaces
-set tabstop=2
-set softtabstop=2 
-set shiftwidth=2 
+set tabstop=4
+set softtabstop=4 
+set shiftwidth=4 
 set shiftround 
 set expandtab 
 " Show “invisible” characters
@@ -96,6 +96,9 @@ map <c-k> <c-w>k
 map <c-l> <c-w>l 
 map <c-h> <c-w>h
 
+" osx copy to clipboard
+vmap <C-c> :w !pbcopy<CR><CR>
+
 " natural move around wrapped text
 nnoremap j gj
 nnoremap k gk
@@ -115,8 +118,8 @@ nmap <Leader>M :set noexpandtab tabstop=8 shiftwidth=8 softtabstop=4<cr>
 nmap <Leader>m :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<cr>
 
 " easier moving between tabs
-map <Leader>n <esc>:tabprevious<cr>
-map <Leader>m <esc>:tabnext<cr>
+map <Leader>N <esc>:tabprevious<cr>
+map <Leader>n <esc>:tabnext<cr>
 
 " Automatic commands
 if has("autocmd")

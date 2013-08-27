@@ -18,6 +18,7 @@ export GPG_TTY=`tty`
 export GNUPGHOME=$HOME/.keys/.gnupg
 # virtualenv
 export WORKON_HOME=$HOME/dev/pve
+export PROJECT_HOME=$HOME/dev/proj
 #export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
