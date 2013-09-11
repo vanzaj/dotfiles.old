@@ -103,8 +103,6 @@ vmap <C-c> :w !pbcopy<CR><CR>
 nnoremap j gj
 nnoremap k gk
 
-" switching buffers 
-nmap <c-e> :e#<cr>
 nnoremap :b :ls<cr>:b<space>
 
 " toggle numbers and paste
