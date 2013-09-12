@@ -138,7 +138,7 @@ set colorcolumn=80
 
 " Setup Pathogen
 call pathogen#infect()
-let g:pathogen_disabled =['python-mode', 'vim-flake8']
+"let g:pathogen_disabled =['python-mode', 'vim-flake8']
 
 " ctrlp
 let g:ctrlp_max_height = 30
