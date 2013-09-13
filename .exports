@@ -1,4 +1,4 @@
-export PATH=$HOME/bin:$PATH:/usr/local/share/npm/bin
+export PATH=$HOME/bin:$PATH:/usr/local/share/python:/usr/local/share/npm/bin
 # Make vim the default editor
 export EDITOR="vim"
 # Don’t clear the screen after quitting a manual page
