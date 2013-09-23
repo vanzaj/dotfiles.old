@@ -76,8 +76,8 @@ else
 	let s:subtle=s:lightGrey
 	let s:faint=s:almostWhite
 	let s:accent1=s:middleDarkBlue
-	let s:accent2=s:middleDarkGreen
-	let s:accent3=s:middleDarkPink
+	let s:accent2=s:middleDarkPink
+	let s:accent3=s:middleDarkBlue
 	let s:accent4=s:almostBlack
 	let s:normRed=s:middleDarkPink
 	let s:normGreen=s:middleDarkGreen
