@@ -1,9 +1,11 @@
 # Load ~/.extra, ~/.bash_prompt, ~/.exports, ~/.aliases and ~/.functions
 # ~/.extra can be used for settings you don’t want to commit
-for file in ~/.{extra,bash_prompt,exports,aliases,functions,virtualenv}; do
+for file in ~/.{bash_prompt,exports,aliases,functions,virtualenv}; do
 	[ -r "$file" ] && source "$file"
 done
 unset file
+
+#test -r ~/.extra && source ~/.extra
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
