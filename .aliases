@@ -116,3 +116,4 @@ alias plistbuddy="/usr/libexec/PlistBuddy"
 #alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 
 alias ipyqt="ipython qtconsole"
+alias todo="subl ~/Cloud/Dropbox/perso/td/pt.TODO"
