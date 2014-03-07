@@ -21,6 +21,7 @@
     # Undo a `git push`
     undopush = push -f origin HEAD^:master
 
+    brav = branch -a -v
     br = branch
     ci = commit
     co = checkout
