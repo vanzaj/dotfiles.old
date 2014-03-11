@@ -115,5 +115,6 @@ alias plistbuddy="/usr/libexec/PlistBuddy"
 
 alias ipyqt="ipython qtconsole"
 alias ipynb="ipython notebook"
-alias todo="subl -n ~/Cloud/Dropbox/perso/td/pt.TODO"
+alias todo="subl -n ~/Cloud/Dropbox/perso/td/*.TODO"
+alias notes="subl -n ~/Cloud/Dropbox/perso/_n"
 alias bfg="java -jar ~/bin/bfg-1.11.1.jar"
