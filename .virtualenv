@@ -48,4 +48,4 @@ if [[ $(type -t workon) != function ]]; then
 fi
 
 # activate autoenv
-source /usr/local/opt/autoenv/activate.sh
+#source /usr/local/opt/autoenv/activate.sh
